@@ -1,33 +1,38 @@
 // Entrada de dados
 
-let Vitorias = "";
-let Derrotas = "";
+let vitorias = 35;
+let derrotas = 17;
 
-// Validação de dados
+// Verificacao de Dados
 
-let function validacaoDados(params) {
-
-    if (typeof Vitorias === "number" || typeof Derrotas === "number") {
+function verificarDados(vitorias, derrotas) {
+    if (typeof vitorias !== number && typeof derrotas !== number) {
     console.log("Erro: Valores devem ser numericos");
+    return false;
     }
 
-    else if (Vitorias < 0 || Derrotas < 0) {
+
+    else if (vitorias < 0 && derrotas < 0) {
     console.log("Erro: Valores devem ser positivos");
+    return false;
     }
 
 else 
+    return true;
 }
 
 
 
 // Processamento de dados
 
-let Saldo = Vitorias - Derrotas;
+function calcularSaldo {
+    saldo = vitorias - derrotas;
+}
 
 
 // Classificação do jogador
 
-const Classificacao = (Saldo) => {
+function classificacao = (vitorias) => {
     vitorias < 10 = "Ferro";
     vitorias >= 11 = "Bronze";
     vitorias >= 21 = "Prata";
@@ -37,4 +42,6 @@ const Classificacao = (Saldo) => {
     vitorias >= 101 = "Imortal";
 
 // Saida
-console.log ("O Herói tem o saldo de " + Saldo + " e está no nível " + Classificacao);
+
+
+console.log ("O Herói tem o saldo de " + saldo + " e está no nível " + classificacao);
