@@ -1,31 +1,28 @@
-// Entrada de Dados
+// Entrada de dados
 
-let vitorias = 57
-let derrotas = 23
+let vitorias = 35;
+let derrotas = 17;
 
-
-// Validacao de Dados
+// Verificacao de Dados
 
 function verificarDados(vitorias, derrotas) {
-
-    let valores = [vitorias, derrotas];
-    for (let i = 0; i < valores.length; i++) {
-
-        if (typeof valores[i] !== "number") {
-            console.log("Erro: Valores devem ser numéricos");
-            return false;
-        }
-
-        if (valores[i] < 0) {
-            console.log("Erro: Valores devem ser positivos");
-            return false;
-        }
+    
+    if (typeof vitorias !== "number" && typeof derrotas !== "number") {
+    console.log("Erro: Valores devem ser numericos");
+        return false;
     }
 
-    return true;
+
+    else if (vitorias < 0 && derrotas < 0) {
+    console.log("Erro: Valores devem ser positivos");
+        return false;
+    }
+
+    else 
+        return true;
 }
 
-// Processamento de Dados
+// Processamento de dados
 
 function calcularSaldo (vitorias, derrotas) {
     return vitorias - derrotas;
